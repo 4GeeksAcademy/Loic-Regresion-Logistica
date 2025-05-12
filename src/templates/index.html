@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Predicción</title>
+</head>
+<body>
+    <h1>Formulario de predicción</h1>
+    <form method="POST">
+        <label>poutcome:</label><input name="poutcome" type="number" step="any"><br>
+        <label>emp.var.rate:</label><input name="emp.var.rate" type="number" step="any"><br>
+        <label>cons.price.idx:</label><input name="cons.price.idx" type="number" step="any"><br>
+        <label>euribor3m:</label><input name="euribor3m" type="number" step="any"><br>
+        <label>nr.employed:</label><input name="nr.employed" type="number" step="any"><br>
+        <input type="submit" value="Predecir">
+    </form>
+
+    {% if prediction %}
+        <h2>Resultado: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
